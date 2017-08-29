@@ -7,6 +7,7 @@ import me.jpomykala.yahoo.formatter.reader.TranslationsReader;
 import me.jpomykala.yahoo.formatter.writer.JsonWriter;
 import me.jpomykala.yahoo.formatter.writer.TranslationsWriter;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @author Jakub Pomykala on 08/08/2017.
  */
 @RestController
+@RequestMapping("/api")
 public class FormatterController {
 
 	@PostMapping(value = "/format")

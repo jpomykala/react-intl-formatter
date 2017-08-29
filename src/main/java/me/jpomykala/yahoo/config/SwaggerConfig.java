@@ -25,7 +25,7 @@ public class SwaggerConfig {
         .groupName("All")
         .select()
         .apis(RequestHandlerSelectors.basePackage("me.jpomykala"))
-        .paths(PathSelectors.any())
+        .paths(PathSelectors.regex("/api.*"))
         .build()
         .pathMapping("/")
         .apiInfo(apiInfo());
