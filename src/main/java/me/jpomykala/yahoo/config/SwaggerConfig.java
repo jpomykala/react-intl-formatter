@@ -37,7 +37,7 @@ public class SwaggerConfig {
         "https://jpomykala.me",
         "jakub.pomykala@gmail.com");
     return new ApiInfoBuilder()
-        .title("ReactIntl formatter")
+        .title("yahoo/react-intl formatter")
         .contact(contact)
         .description("jpomykala.me")
         .version("1.0")
