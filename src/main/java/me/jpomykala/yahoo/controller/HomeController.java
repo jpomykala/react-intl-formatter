@@ -2,10 +2,12 @@ package me.jpomykala.yahoo.controller;
 
 import java.io.IOException;
 import java.util.Map;
+import javax.servlet.http.HttpServletResponse;
 import me.jpomykala.yahoo.formatter.reader.ExcelReader;
 import me.jpomykala.yahoo.formatter.reader.TranslationsReader;
 import me.jpomykala.yahoo.formatter.writer.JsonWriter;
 import me.jpomykala.yahoo.formatter.writer.TranslationsWriter;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,11 +30,14 @@ public class HomeController {
 
 	@PostMapping(value = "/format", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
 	@ResponseBody
-	public byte[] formatFile(@RequestParam("file") MultipartFile file) throws IOException {
+	public byte[] formatFile(
+			HttpServletResponse response,
+			@RequestParam("file") MultipartFile file) throws IOException {
 		byte[] excelFile = file.getBytes();
 		TranslationsReader translationsReader = new ExcelReader();
 		Map<String, Map<String, String>> translationsMap = translationsReader.read(excelFile);
 		TranslationsWriter translationsWriter = new JsonWriter();
+		response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + "data.json");
 		return translationsWriter.write(translationsMap);
 	}
 
