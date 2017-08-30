@@ -42,15 +42,24 @@
     <h3 class="text-muted">React i18n Formatter </h3>
   </div>
 
-  <div class="jumbotron">
-    <h1 class="display-3"><strong>*.xlsx&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;JSON</strong></h1>
-    <p class="lead">Right now there is no customization options, but feel free to request some as GitHub issue.
-    Example Excel file can be found here. <a href="" target="_blank">download example</a> </p>
+  <form method="POST" enctype="multipart/form-data" th:action="@{/format}">
+    <div class="jumbotron">
+      <h1 class="display-3"><strong>*.xlsx&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;JSON</strong>
+      </h1>
+      <p class="lead">Right now there is no customization options, but feel free to request some as
+        GitHub issue.
+        Example Excel file can be <a
+            href="https://github.com/jpomykala/react-intl-formatter/raw/master/example_translations.xlsx"
+            target="_blank">found here.</a></p>
 
-    <input type="file"/>
-    <br/>
-    <p><a class="btn btn-lg btn-success" href="#" role="button">Format file</a></p>
-  </div>
+      <div class="d-block mx-auto">
+        <input type="file" name="file"/>
+      </div>
+      <br/>
+      <br/>
+      <p><button type="submit" class="btn btn-lg btn-success" >Format file</button></p>
+    </div>
+  </form>
 
   <footer class="footer">
     <p>&copy; <a href="https://jpomykala.me" target="_blank">jpomykala.me</a> 2017</p>
