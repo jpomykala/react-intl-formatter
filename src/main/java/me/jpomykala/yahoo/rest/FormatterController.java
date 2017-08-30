@@ -1,4 +1,4 @@
-package me.jpomykala.yahoo.controller;
+package me.jpomykala.yahoo.rest;
 
 import java.io.IOException;
 import java.util.Map;
