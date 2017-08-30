@@ -37,7 +37,8 @@ public class HomeController {
 		TranslationsReader translationsReader = new ExcelReader();
 		Map<String, Map<String, String>> translationsMap = translationsReader.read(excelFile);
 		TranslationsWriter translationsWriter = new JsonWriter();
-		response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + "data.json");
+		String outputFileName = "data.json";
+		response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + outputFileName);
 		return translationsWriter.write(translationsMap);
 	}
 
