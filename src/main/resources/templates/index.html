@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content="Jakub Pomykała"/>
+
+  <title>Formatter</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <!-- Custom styles for this template -->
+  <link th:href="@{app.css}" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills float-right">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/jpomykala/react-intl-formatter"
+             target="_blank">Github</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://jpomykala.me" target="_blank">About</a>
+        </li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">React i18n Formatter </h3>
+  </div>
+
+  <div class="jumbotron">
+    <h1 class="display-3"><strong>*.xlsx&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;JSON</strong></h1>
+    <p class="lead">Right now there is no customization options, but feel free to request some as GitHub issue.
+    Example Excel file can be found here. <a href="" target="_blank">download example</a> </p>
+
+    <input type="file"/>
+    <br/>
+    <p><a class="btn btn-lg btn-success" href="#" role="button">Format file</a></p>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; <a href="https://jpomykala.me" target="_blank">jpomykala.me</a> 2017</p>
+  </footer>
+
+</div> <!-- /container -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+</body>
+</html>
+
